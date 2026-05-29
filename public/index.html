@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Remarkable Finders Cards &amp; Collectibles</title>
 <meta name="description" content="High-volume eBay seller of trading cards and collectibles since 2016. Baseball, basketball, football, Pokémon, Yu-Gi-Oh and more. 100% positive feedback.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23D42B2B'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Verdana,sans-serif' font-size='40' font-weight='900' fill='%23fff'%3ERF%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%233b82f6'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Verdana,sans-serif' font-size='40' font-weight='900' fill='%23fff'%3ERF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--red:#D42B2B;--red-dark:#A01E1E;--red-bright:#FF3333;--black:#0A0A0A;--black2:#111111;--black3:#1A1A1A;--white:#FFFFFF;--offwhite:#F0F0F0;--gray:#888888;--gray2:#555555;--border:rgba(212,43,43,0.3);}
+:root{--red:#3b82f6;--red-dark:#2563eb;--red-bright:#60a5fa;--black:#0a0e17;--black2:#0e1420;--black3:#141c2e;--white:#FFFFFF;--offwhite:#e6ebf2;--gray:#94a3b8;--gray2:#64748b;--border:rgba(59,130,246,0.30);--green:#10b981;}
 html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;font-weight:300;overflow-x:hidden;margin:0;padding:0;}
 a{color:inherit;text-decoration:none;}
 
 /* NAV */
-.rf-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0.8rem 3rem;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:2px solid var(--red);}
+.rf-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0.8rem 3rem;background:rgba(10,14,23,0.95);backdrop-filter:blur(12px);border-bottom:2px solid var(--red);}
 .rf-logo{text-decoration:none;display:flex;align-items:center;gap:0.8rem;}
 .rf-logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--white);letter-spacing:0.05em;line-height:1;}
 .rf-logo-text span{color:var(--red);}
@@ -37,7 +37,7 @@ a{color:inherit;text-decoration:none;}
 
 /* HERO */
 .rf-hero{min-height:60vh;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:3rem;position:relative;overflow:hidden;padding:6rem 4rem 3rem;}
-.rf-hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0A0A0A 0%,#1a0a0a 50%,#0A0A0A 100%);}
+.rf-hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0a0e17 0%,#101b35 50%,#0a0e17 100%);}
 .rf-hero-bg::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");opacity:0.4;}
 .rf-hero-slash{position:absolute;top:-10%;right:5%;width:4px;height:140%;background:var(--red);transform:rotate(15deg);opacity:0.15;}
 .rf-hero-slash::before{content:'';position:absolute;left:30px;top:0;width:2px;height:100%;background:var(--red);opacity:0.5;}
@@ -78,7 +78,7 @@ a{color:inherit;text-decoration:none;}
 .rf-vis{position:relative;height:420px;}
 .rf-vis-box{position:absolute;inset:0;background:var(--black3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .rf-vis-badge{position:absolute;bottom:-1rem;left:-1rem;background:var(--red);color:var(--white);font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.08em;padding:0.7rem 1.4rem;z-index:3;}
-.rf-vis-tag{position:absolute;top:1.2rem;right:1.2rem;background:rgba(10,10,10,0.9);border:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);padding:0.4rem 0.8rem;}
+.rf-vis-tag{position:absolute;top:1.2rem;right:1.2rem;background:rgba(10,14,23,0.9);border:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);padding:0.4rem 0.8rem;}
 
 /* CATEGORIES */
 .rf-cats{background:var(--black);}
@@ -103,8 +103,8 @@ a{color:inherit;text-decoration:none;}
 .rf-pt-title{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);margin-bottom:0.3rem;}
 .rf-pt-text{font-size:0.85rem;color:var(--gray);line-height:1.65;}
 .rf-cta-box{background:var(--black3);border:1px solid var(--border);border-top:4px solid var(--red);padding:3rem;text-align:center;position:relative;overflow:hidden;}
-.rf-cta-box::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(212,43,43,0.1) 0%,transparent 70%);}
-.rf-cta-badge{display:inline-flex;align-items:center;background:rgba(212,43,43,0.15);border:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);padding:0.45rem 1rem;margin-bottom:1.5rem;}
+.rf-cta-box::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(59,130,246,0.10) 0%,transparent 70%);}
+.rf-cta-badge{display:inline-flex;align-items:center;background:rgba(59,130,246,0.15);border:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);padding:0.45rem 1rem;margin-bottom:1.5rem;}
 .rf-cta-title{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--white);line-height:1.1;margin-bottom:0.8rem;letter-spacing:0.05em;}
 .rf-cta-sub{font-size:0.88rem;color:var(--gray);line-height:1.7;margin-bottom:2rem;position:relative;z-index:1;}
 .rf-stats{display:flex;justify-content:center;gap:2.5rem;margin-bottom:2rem;}
@@ -126,7 +126,7 @@ a{color:inherit;text-decoration:none;}
 .rf-contact{background:var(--black2);border-top:1px solid var(--border);}
 .rf-contact-info{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.8rem;}
 .rf-ci{display:flex;gap:1.2rem;align-items:flex-start;}
-.rf-ci-icon{width:38px;height:38px;flex-shrink:0;background:rgba(212,43,43,0.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;}
+.rf-ci-icon{width:38px;height:38px;flex-shrink:0;background:rgba(59,130,246,0.10);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;}
 .rf-ci-lbl{font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--red);margin-bottom:0.2rem;opacity:0.8;}
 .rf-ci-val{font-size:0.9rem;color:var(--offwhite);}
 .rf-ci-val a{color:var(--red);}
@@ -139,7 +139,7 @@ a{color:inherit;text-decoration:none;}
 .rf-contact-panel .btn-r{width:100%;justify-content:center;}
 
 /* FOOTER */
-.rf-footer{background:#050505;border-top:2px solid var(--red);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+.rf-footer{background:#070b13;border-top:2px solid var(--red);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
 .rf-foot-logo{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--white);letter-spacing:0.05em;}
 .rf-foot-logo span{color:var(--red);}
 .rf-foot-sub{font-family:'Barlow Condensed',sans-serif;font-size:0.58rem;letter-spacing:0.25em;color:var(--gray);display:block;margin-top:2px;}
@@ -172,6 +172,23 @@ a{color:inherit;text-decoration:none;}
   .rf-why-grid{grid-template-columns:1fr;}
   .rf-hero-actions{flex-direction:column;}
 }
+
+
+/* RESELLER'S PRO CROSS-PROMO */
+.rf-software{background:linear-gradient(135deg,#080808 0%,#101826 55%,#080808 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.rf-software::before{content:'';position:absolute;right:-120px;top:-120px;width:360px;height:360px;background:radial-gradient(circle,rgba(59,130,246,.16) 0%,transparent 70%);pointer-events:none;}
+.rf-software-card{background:rgba(17,17,17,.82);border:1px solid rgba(59,130,246,.35);border-top:4px solid #3b82f6;padding:3rem;position:relative;overflow:hidden;}
+.rf-software-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.35);font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#3b82f6;padding:.45rem 1rem;margin-bottom:1.5rem;}
+.rf-software-logo{width:58px;height:58px;border-radius:14px;background:#3b82f6;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:#07111f;box-shadow:0 0 40px rgba(59,130,246,.35);margin-bottom:1.2rem;position:relative;}
+.rf-software-logo::after{content:'';position:absolute;right:8px;top:8px;width:9px;height:9px;border-radius:50%;background:#10b981;}
+.rf-software-list{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:2rem 0;}
+.rf-software-list div{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);padding:.85rem 1rem;font-family:'Barlow Condensed',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--offwhite);}
+.rf-software-list span{color:#10b981;margin-right:.4rem;}
+.btn-blue{display:inline-flex;align-items:center;gap:.6rem;background:#3b82f6;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;padding:1rem 2.2rem;border:2px solid #3b82f6;transition:background .2s,color .2s,transform .2s;}
+.btn-blue:hover{background:transparent;color:#3b82f6;transform:translateY(-2px);}
+.rf-software-note{margin-top:1rem;color:var(--gray);font-size:.85rem;line-height:1.7;}
+@media(max-width:700px){.rf-software-card{padding:2rem}.rf-software-list{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -189,6 +206,7 @@ a{color:inherit;text-decoration:none;}
     <li><a href="#categories">Shop</a></li>
     <li><a href="#mission">Why Us</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#resellerspro">Reseller's Pro</a></li>
   </ul>
   <div class="rf-nav-btns">
     <a href="https://www.ebay.com/str/remarkablefinders" target="_blank" class="rf-nav-btn">🛒 Visit eBay Store</a>
@@ -207,7 +225,7 @@ a{color:inherit;text-decoration:none;}
       </div>
       <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:600;letter-spacing:0.4em;text-transform:uppercase;color:var(--gray);margin-top:0.5rem;">Cards &amp; Collectibles</div>
     </div>
-    <p class="rf-hero-tagline">Buy &amp; Sell Trading Cards · Low Cost Combined Shipping · Fast Shipping!<br>High-volume eBay seller since 2016 with 100% positive feedback.</p>
+    <p class="rf-hero-tagline">Buy &amp; Sell Trading Cards · Low Cost Combined Shipping · Fast Shipping!<br>High-volume eBay seller since 2016 with 100% positive feedback.<br><span style="color:var(--red);font-weight:700;">Creator of Reseller's Pro — the reseller operating system.</span></p>
     <div class="rf-hero-actions">
       <a href="https://www.ebay.com/str/remarkablefinders" target="_blank" class="btn-r">🛒 Shop Our eBay Store</a>
       <a href="#story" class="btn-w">Our Story ↓</a>
@@ -216,7 +234,7 @@ a{color:inherit;text-decoration:none;}
   <div style="position:relative;z-index:2;flex:1;display:flex;align-items:center;justify-content:center;animation:slideUp 0.8s 0.2s ease both;">
     <img src="https://remarkablefinders.com/wp-content/uploads/2026/05/Screenshot-2026-05-11-102520.jpg"
          alt="Remarkable Finders Cards &amp; Collectibles"
-         style="width:100%;max-width:580px;height:auto;display:block;filter:drop-shadow(0 8px 40px rgba(212,43,43,0.5));"
+         style="width:100%;max-width:580px;height:auto;display:block;filter:drop-shadow(0 8px 40px rgba(59,130,246,0.45));"
          onerror="this.style.display='none'"/>
   </div>
 </section>
@@ -325,6 +343,37 @@ a{color:inherit;text-decoration:none;}
   </div>
 </section>
 
+
+
+<!-- RESELLER'S PRO -->
+<section class="rf-sec rf-software" id="resellerspro">
+  <div class="rf-two">
+    <div>
+      <div class="rf-tag">Built By A Reseller</div>
+      <h2 class="rf-h">One Store.<br><span>One System.</span></h2>
+      <p class="rf-p">Running an eBay business should not require five different apps. After years of tracking inventory, orders, expenses, profits, and analytics across multiple platforms, I built my own solution.</p>
+      <div class="rf-quote">"Reseller's Pro is the software I personally use to manage my reseller business in one place."</div>
+      <p class="rf-p">Remarkable Finders is the store. Reseller's Pro is the system behind the business.</p>
+    </div>
+    <div class="rf-software-card">
+      <div class="rf-software-badge">Reseller Operating System</div>
+      <div class="rf-software-logo">R</div>
+      <div class="rf-cta-title">Reseller's Pro</div>
+      <p class="rf-cta-sub">One app for inventory, orders, analytics, bookkeeping, reports, and AI business insights.</p>
+      <div class="rf-software-list">
+        <div><span>✓</span>Inventory</div>
+        <div><span>✓</span>Orders</div>
+        <div><span>✓</span>Profit</div>
+        <div><span>✓</span>Expenses</div>
+        <div><span>✓</span>Analytics</div>
+        <div><span>✓</span>AI Coach</div>
+      </div>
+      <a href="https://resellerspro.com" target="_blank" class="btn-blue">🚀 Learn About Reseller's Pro →</a>
+      <p class="rf-software-note">Built by a reseller, for resellers. Currently built for eBay sellers, with more marketplaces planned.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="rf-sec rf-contact" id="contact">
   <div class="rf-two">
@@ -360,8 +409,9 @@ a{color:inherit;text-decoration:none;}
     <li><a href="#categories">Shop</a></li>
     <li><a href="https://www.ebay.com/str/remarkablefinders" target="_blank">eBay Store</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="https://resellerspro.com" target="_blank">Reseller's Pro</a></li>
   </ul>
-  <div class="rf-foot-copy">© 2026 Remarkable Finders. All rights reserved.</div>
+  <div class="rf-foot-copy">© 2026 Remarkable Finders. All rights reserved.<br>Built by a reseller using <a href="https://resellerspro.com" target="_blank" style="color:var(--red);">Reseller's Pro</a>.</div>
 </footer>
 
 <script>
