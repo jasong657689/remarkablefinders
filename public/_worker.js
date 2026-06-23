@@ -1,6 +1,27 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    // Old Shopify URLs — return 410 Gone so Google drops them from the index fast.
+    // These no longer exist since migrating away from Shopify.
+    const gone = [
+      /^\/products\//,
+      /^\/collections\//,
+      /^\/cart/,
+      /^\/account/,
+      /^\/search/,
+      /^\/pages\//,
+      /^\/policies\//,
+      /^\/tag\//,
+      /^\/comments\//,
+    ];
+    if (request.method === 'GET' && gone.some(r => r.test(url.pathname))) {
+      return new Response('This page no longer exists.', {
+        status: 410,
+        headers: { 'Content-Type': 'text/plain', 'Cache-Control': 'public, max-age=86400' }
+      });
+    }
+
     const response = await env.ASSETS.fetch(request);
 
     if (request.method !== 'GET') return response;
