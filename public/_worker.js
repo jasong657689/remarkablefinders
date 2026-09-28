@@ -2,6 +2,28 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    if (url.pathname === '/api/storefront-metrics') {
+      if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
+      const cache = caches.default;
+      const cacheKey = new Request(url.origin + '/api/storefront-metrics', { method: 'GET' });
+      const cached = await cache.match(cacheKey);
+      if (cached) return cached;
+      try {
+        const upstream = await fetch('https://resellersproappprivate-production.up.railway.app/api/public/storefront-metrics');
+        if (!upstream.ok) throw new Error('Inventory snapshot unavailable');
+        const body = await upstream.text();
+        const response = new Response(body, {
+          headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=3600, s-maxage=86400', 'X-Content-Type-Options': 'nosniff' }
+        });
+        await cache.put(cacheKey, response.clone());
+        return response;
+      } catch {
+        return new Response(JSON.stringify({ error: 'Inventory snapshot temporarily unavailable' }), {
+          status: 503, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=60' }
+        });
+      }
+    }
+
     // Old Shopify URLs — return 410 Gone so Google drops them from the index fast.
     // These no longer exist since migrating away from Shopify.
     const gone = [
