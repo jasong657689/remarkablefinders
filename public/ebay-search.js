@@ -4,13 +4,22 @@
   const status = document.getElementById('rf-search-status');
   const results = document.getElementById('rf-search-results');
   const more = document.getElementById('rf-search-more');
+  const reset = document.getElementById('rf-search-reset');
+  reset.addEventListener('click', () => {
+    controller?.abort(); generation++;
+    query = ''; cursor = null; input.value = '';
+    results.replaceChildren(); more.hidden = true; reset.hidden = true;
+    form.querySelector('button[type="submit"]').disabled = false;
+    status.textContent = 'Find cards and collectibles available in our eBay store.';
+    input.focus({ preventScroll:true });
+  });
   let query = '', cursor = null, controller = null, generation = 0;
   const money = new Intl.NumberFormat('en-US', { style:'currency', currency:'USD' });
   async function search(append) {
     if (!append) {
       query = input.value.trim();
       if (query.length < 2) { status.textContent = 'Enter at least 2 characters to search.'; input.focus(); return; }
-      controller?.abort(); generation++; cursor = null; results.replaceChildren();
+      controller?.abort(); generation++; cursor = null; results.replaceChildren(); reset.hidden = false;
     }
     const version = generation;
     controller = new AbortController();

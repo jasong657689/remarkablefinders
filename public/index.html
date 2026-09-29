@@ -311,6 +311,7 @@ a{color:inherit;text-decoration:none;}
     <form id="rf-search-form" role="search">
       <input id="rf-search-input" type="search" maxlength="120" placeholder="Search player, set, year, card number, or item…" required minlength="2">
       <button type="submit" class="btn-w">Search</button>
+      <button id="rf-search-reset" type="button" class="btn-w" hidden>Reset</button>
     </form>
     <p id="rf-search-status" class="rf-inventory-note" role="status" aria-live="polite">Find cards and collectibles available in our eBay store.</p>
     <div id="rf-search-results"></div>
@@ -537,6 +538,6 @@ document.querySelectorAll('.rf-cell,.rf-why-card,.rf-pt,.rf-ci,.rf-promo-item').
   io.observe(el);
 });
 </script>
-<script src="/ebay-search.js?v=20260929"></script>
+<script src="/ebay-search.js?v=20260929-reset"></script>
 </body>
 </html>
