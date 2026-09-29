@@ -35,7 +35,7 @@
       cursor = data.nextCursor; more.hidden = !cursor;
       status.textContent = results.children.length ? 'Showing '+results.children.length+' matching listings for “'+query+'”. Availability and prices reflect our latest inventory import; confirm on eBay.' : 'No matching listings in our latest eBay inventory import. Try a player, set, year, or different item name.';
     } catch(error) {
-      if(error.name !== 'AbortError' && version === generation) { status.textContent=error.message; more.hidden=!(append && cursor); }
+      if(error.name !== 'AbortError' && version === generation) { status.textContent=error.message === 'Failed to fetch' ? 'Inventory search is temporarily unavailable. Please try again shortly.' : error.message; more.hidden=!(append && cursor); }
     } finally { if(version === generation) form.querySelector('button').disabled=false; }
   }
   form.addEventListener('submit',event=>{event.preventDefault();search(false);});
