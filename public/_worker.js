@@ -13,7 +13,7 @@ export default {
         if (!upstream.ok) throw new Error('Inventory snapshot unavailable');
         const body = await upstream.text();
         const response = new Response(body, {
-          headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=3600, s-maxage=86400', 'X-Content-Type-Options': 'nosniff' }
+          headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=60, s-maxage=60', 'X-Content-Type-Options': 'nosniff' }
         });
         await cache.put(cacheKey, response.clone());
         return response;
